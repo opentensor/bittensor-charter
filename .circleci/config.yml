@@ -1,0 +1,68 @@
+version: 2.1
+
+# this allows you to use CircleCI's dynamic configuration feature
+setup: true
+
+orbs:
+  discord: antonioned/discord@0.1.0
+
+parameters:
+  run-check-delegates-job:
+    type: boolean
+    default: false
+
+jobs:
+  plan:
+    working_directory: /tmp/project
+    docker:
+      - image: cimg/python:3.10
+    parameters:
+      discord_webhook:
+        type: string
+        default: ''
+    steps:
+      - run:
+          name: Installing curl and bash (For notifications delivery)
+          command: |
+            apk add --no-cache curl bash
+      - checkout
+      - discord/status:
+          fail_only: false
+          failure_message: "**${CIRCLE_JOB}**: Check signatures failed. **Job triggered by** ${CIRCLE_USERNAME}."
+          webhook: << parameters.discord_webhook >>
+          success_message: "**${CIRCLE_JOB}**: Check signatures executed succesfully. **Job triggered by** ${CIRCLE_USERNAME}."
+
+  check-json-file:
+    docker:
+      - image: cimg/python:3.10
+    steps:
+      - checkout
+
+      - restore_cache:
+          name: Restore cached venv
+          key: &deps bittensor-delegates-{{ .Branch }}-{{ checksum "tooling/requirements.txt" }}
+
+      - run:
+          name: Update & Activate venv
+          command: |
+            python -m venv env
+            . env/bin/activate
+            pip install --upgrade pip && pip install -r tooling/requirements.txt
+
+      - run:
+          name: public/delegates.json signatures are present and correct
+          command: |
+            ./checks/verify_signature.sh
+
+      - save_cache:
+          name: Save cached venv
+          key: *deps
+          paths:
+            - "env"
+            - ".git"
+
+workflows:
+  # the always-run workflow is always triggered, regardless of the pipeline parameters.
+  pr-requirements:
+    jobs:
+      - check-json-file
