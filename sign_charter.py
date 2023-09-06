@@ -2,7 +2,7 @@ import bittensor
 from bittensor import Keypair
 import json
 
-charter_file = "./charter.txt"
+charter_file = "./charter.md"
 output_file = "./signatures.json"
 
 name = input("Your entity's descriptive name (e.g. Opentensor Foundation):\n")
@@ -46,7 +46,4 @@ def sign_charter(keypair):
 # Load the wallet using the supplied 
 signature = sign_charter(keypair)
 if signature:
-
-
-
     print("Signature: \n {}. Saved in file {}".format(signature, output_file))
