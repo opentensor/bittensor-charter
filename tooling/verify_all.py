@@ -2,7 +2,7 @@ import json
 from binascii import unhexlify
 from bittensor import Keypair
 
-charter_file = "charter.txt"
+charter_file = "charter.md"
 
 with open("signatures.json", "r") as fh:
     information_dict = json.loads(fh.read())
