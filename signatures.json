@@ -8,5 +8,15 @@
         "name": "τaosτaτs and BitAPAI",
         "url": "taostats.io",
         "signature": "e48dc18b0b6e0d6169c91828c38a13bbb0932ff98ac37fd63114f2d3f62e3d13a03171a5b42cd57ed57410121c497d6b61255bed18fa463e0dd62de3cd824083"
+    },
+    "5FFApaS75bv5pJHfAp2FVLBj9ZaXuFDjEypsaBNc1wCfe52v": {
+        "name": "RoundTable21",
+        "url": "https://www.roundtable21.com",
+        "signature": "6e7afecb92920567c46beb1c5b3255b6aab710fb3d00080a3593289a36bcfd4fea0d6a1f0b9556d1f2b4b1e0f318651629f234bea34a6babfa35a8e19c562b80"
+    },
+    "5EhvL1FVkQPpMjZX4MAADcW42i3xPSF1KiCpuaxTYVr28sux": {
+        "name": "TAO-Validator.com",
+        "url": "https://www.tao-validator.com/",
+        "signature": "2e788988128fb39f457337d8e9263ab7974990f8ddb78776db0d9bbdf9940f65c81cdbb0bb83fe5d396f1053b27163191d0d360679f49ef5db1feab7d6bb8a8f"
     }
 }
