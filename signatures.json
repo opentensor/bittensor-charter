@@ -28,5 +28,10 @@
         "name": "Lucrosus Capital",
         "url": "https://lucrosuspool.io/",
         "signature": "4c0029413e800bb6259c3ae2386c3855658bacc16dceae44d36b056ae3dca559688d1e4660643710621492a85292492f2ac7898e465338dee8d0d5c67f3f7a81"
-    }    
+    },
+    "5CXRfP2ekFhe62r7q3vppRajJmGhTi7vwvb2yr79jveZ282w": {
+        "name": "Rizzo",
+        "url": "",
+        "signature": "a081d4cf97c4c640d392a6cb5f7fc121c629bcb00e9dc345f04a85c459d1135399bb81f47b7de54e12236499f061a43c6ad6a71734c240aeef83ef0f94dca387"
+    }
 }
