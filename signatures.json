@@ -28,5 +28,10 @@
         "name": "Lucrosus Capital",
         "url": "https://lucrosuspool.io/",
         "signature": "4c0029413e800bb6259c3ae2386c3855658bacc16dceae44d36b056ae3dca559688d1e4660643710621492a85292492f2ac7898e465338dee8d0d5c67f3f7a81"
-    }    
+    },
+    "5EsbfxPcQaUrCDurUJ8Q5qDKNENNGziu3qHWUbXrcuY2pbNz": {
+        "name": "Church of Rao",
+        "url": "www.churchofrao.com",
+        "signature": "ee689eaebbf651427f8ac528469483d2c40431f5d228992a630c64ee5cd25c568b1441a6730b52c056c4d4855136fcbeea39b37899dfef9b0200754fb2c7fb85"
+    }
 }
